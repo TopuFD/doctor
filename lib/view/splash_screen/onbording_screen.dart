@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:doctor/core/route.dart';
 import 'package:doctor/view/splash_screen/controller/onbording_controller.dart';
 import 'package:doctor/widgets/custom_body_btn.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,7 @@ import 'package:get/get.dart';
 class OnbordingScreen extends StatelessWidget {
   OnbordingScreen({super.key});
 
-  OnbordingController onbordingController = Get.put(OnbordingController());
+  OnbordingController onbordingController = Get.find<OnbordingController>();
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +42,9 @@ class OnbordingScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
               ));
         })),
-        CustomBodyButton(isOnbording: true, ontap: () {}),
+        CustomBodyButton(isOnbording: true, ontap: () {
+          Get.toNamed(AppRoute.chooseRole);
+        }),
         SizedBox(
           height: Get.height * .03,
         ),

@@ -4,6 +4,7 @@ import 'package:doctor/utils/color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+// ignore: must_be_immutable
 class CustomBodyButton extends StatelessWidget {
   final VoidCallback ontap;
   final String? btnTitle;
@@ -13,7 +14,7 @@ class CustomBodyButton extends StatelessWidget {
       this.btnTitle,
       required this.ontap,
       required this.isOnbording});
-  OnbordingController onbordingController = Get.put(OnbordingController());
+  OnbordingController onbordingController = Get.find<OnbordingController>();
   @override
   Widget build(BuildContext context) {
     return SizedBox(

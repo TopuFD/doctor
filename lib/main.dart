@@ -1,10 +1,14 @@
+import 'package:doctor/core/dependency.dart';
 import 'package:doctor/core/route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
+  DependencyInjection di = DependencyInjection();
+  di.dependencies();
   runApp(const MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
