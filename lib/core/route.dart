@@ -7,6 +7,6 @@ class AppRoute{
   static const onbordingScreen = "/onbordingScreen";
   static List<GetPage> pages = [
     GetPage(name: splashScreen, page: (()=> const SplashScreen())),
-    GetPage(name: onbordingScreen, page: (()=> const OnbordingScreen())),
+    GetPage(name: onbordingScreen, page: (()=>  OnbordingScreen())),
   ];
 }
